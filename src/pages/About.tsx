@@ -106,7 +106,7 @@ export default function About() {
               <img
                 src="/images/about/hero.jpg"
                 alt="Suresh De Silva"
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover object-top opacity-80"
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Suresh De Silva</h3>

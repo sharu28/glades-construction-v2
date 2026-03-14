@@ -13,7 +13,7 @@ export default function Home() {
       className="w-full"
     >
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden">
+      <section className="relative h-[67vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/home/hero-bg.png"
@@ -92,9 +92,9 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Residential Housing', img: '/images/home/service-card-residential.jpg' },
-              { title: 'Landscaping', img: '/images/home/service-card-landscaping.jpg' },
-              { title: 'Commercial Civil Engineering', img: '/images/home/service-card-commercial.jpg' }
+              { title: 'Residential Housing', img: '/images/home/service-card-landscaping.jpg' },
+              { title: 'Landscaping', img: '/images/home/service-card-commercial.jpg' },
+              { title: 'Commercial Civil Engineering', img: '/images/home/service-card-residential.jpg' }
             ].map((cat, i) => (
               <Link to="/services" key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#e08b2d] transition-all duration-300">
                 <div className="h-64 overflow-hidden">
