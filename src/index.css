@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #1a1a1a;
+  --color-secondary-dark: #2e3440;
+  --color-texture-mid: #6b6560;
+  --color-accent-amber: #e08b2d;
+  --color-light-base: #f4f1ec;
+  
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-light-base);
+  color: var(--color-primary-dark);
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
