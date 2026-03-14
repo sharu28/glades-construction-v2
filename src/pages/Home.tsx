@@ -18,7 +18,7 @@ export default function Home() {
           <img
             src="/images/home/hero-bg.png"
             alt="Construction Site"
-            className="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+            className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
         </div>
@@ -98,7 +98,7 @@ export default function Home() {
             ].map((cat, i) => (
               <Link to="/services" key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#e08b2d] transition-all duration-300">
                 <div className="h-64 overflow-hidden">
-                  <img src={cat.img} alt={cat.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500 mix-blend-luminosity group-hover:mix-blend-normal" />
+                  <img src={cat.img} alt={cat.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 bg-[#2e3440]">
                   <h3 className="font-display text-2xl font-bold text-white uppercase tracking-wider mb-2">{cat.title}</h3>

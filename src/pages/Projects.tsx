@@ -78,8 +78,7 @@ export default function Projects() {
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-luminosity group-hover:mix-blend-normal"
-                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-[#1a1a1a]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6">
                     <div className="self-start">

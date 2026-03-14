@@ -31,9 +31,9 @@ export default function About() {
         </div>
         <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative">
           <img
-            src="/images/about/hero.jpg"
+            src="/images/project-cards/the-manor-house.jpg"
             alt="Construction Engineering"
-            className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80"
+            className="absolute inset-0 w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-[#2e3440]/20 mix-blend-multiply"></div>
         </div>
@@ -104,9 +104,9 @@ export default function About() {
           <div className="flex flex-col">
             <div className="h-80 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
               <img
-                src="/images/about/founder-suresh.jpg"
+                src="/images/about/hero.jpg"
                 alt="Suresh De Silva"
-                className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
+                className="w-full h-full object-cover opacity-80"
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Suresh De Silva</h3>
@@ -125,9 +125,9 @@ export default function About() {
           <div className="flex flex-col">
             <div className="h-80 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
               <img
-                src="/images/about/founder-chatura.jpeg"
+                src="/images/about/founder-suresh.jpg"
                 alt="Chatura Samarasinghe"
-                className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
+                className="w-full h-full object-cover opacity-80"
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Chatura Samarasinghe</h3>

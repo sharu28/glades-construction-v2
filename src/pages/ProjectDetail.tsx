@@ -32,8 +32,7 @@ export default function ProjectDetail() {
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
-          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent"></div>
         
