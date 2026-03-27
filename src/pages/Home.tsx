@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/project-collection" className="w-full sm:w-auto bg-[#e08b2d] hover:bg-white text-[#1a1a1a] px-8 py-4 rounded-full font-bold uppercase tracking-wider transition-colors text-center">
+            <Link to="/project-collection" className="w-full sm:w-auto bg-[#859664] hover:bg-white text-[#1a1a1a] px-8 py-4 rounded-full font-bold uppercase tracking-wider transition-colors text-center">
               View Our Projects
             </Link>
             <Link to="/services" className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a] px-8 py-4 rounded-full font-bold uppercase tracking-wider transition-colors text-center">
@@ -63,19 +63,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-[#e08b2d] mb-2">70+</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">70+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Years Experience</div>
             </div>
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-[#e08b2d] mb-2">9</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">9</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Projects Delivered</div>
             </div>
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-[#e08b2d] mb-2">7</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">7</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Services Offered</div>
             </div>
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-[#e08b2d] mb-2">40+</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">40+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Yrs Founder Track Record</div>
             </div>
           </div>
@@ -96,13 +96,13 @@ export default function Home() {
               { title: 'Landscaping', img: '/images/home/service-card-commercial.jpg' },
               { title: 'Commercial Civil Engineering', img: '/images/home/service-card-residential.jpg' }
             ].map((cat, i) => (
-              <Link to="/services" key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#e08b2d] transition-all duration-300">
+              <Link to="/services" key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#859664] transition-all duration-300">
                 <div className="h-64 overflow-hidden">
                   <img src={cat.img} alt={cat.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 bg-[#2e3440]">
                   <h3 className="font-display text-2xl font-bold text-white uppercase tracking-wider mb-2">{cat.title}</h3>
-                  <div className="flex items-center text-[#e08b2d] font-bold uppercase text-sm tracking-wider">
+                  <div className="flex items-center text-[#b5c38e] font-bold uppercase text-sm tracking-wider">
                     Explore More <ArrowRight size={16} className="ml-2" />
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function Home() {
               { num: '04', title: 'DELIVER', desc: 'On time, on budget, and snagging-free handover of your completed project.' }
             ].map((step, i) => (
               <div key={i} className="relative z-10 bg-[#1a1a1a] md:pr-8">
-                <div className="font-display text-6xl font-bold text-[#e08b2d] mb-4">{step.num}</div>
+                <div className="font-display text-6xl font-bold text-[#b5c38e] mb-4">{step.num}</div>
                 <h3 className="font-display text-2xl font-bold uppercase tracking-wider mb-3">{step.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{step.desc}</p>
               </div>
@@ -145,7 +145,7 @@ export default function Home() {
             <h2 className="font-display text-5xl font-bold text-[#1a1a1a] uppercase tracking-tight mb-2">Recent Projects</h2>
             <p className="text-[#6b6560]">Delivering construction that performs.</p>
           </div>
-          <Link to="/project-collection" className="hidden md:flex items-center text-[#1a1a1a] font-bold uppercase tracking-wider hover:text-[#e08b2d] transition-colors">
+          <Link to="/project-collection" className="hidden md:flex items-center text-[#1a1a1a] font-bold uppercase tracking-wider hover:text-[#859664] transition-colors">
             View All <ArrowRight size={20} className="ml-2" />
           </Link>
         </div>
@@ -158,7 +158,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                 
                 <div className="absolute top-4 left-4">
-                  <span className="bg-[#e08b2d] text-[#1a1a1a] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm">
+                  <span className="bg-[#859664] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm">
                     {project.type}
                   </span>
                 </div>
@@ -166,7 +166,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 w-full p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="font-display text-2xl font-bold text-white uppercase tracking-wider mb-1">{project.title.split('—')[0].trim()}</h3>
                   <p className="text-gray-300 text-sm">{project.location}</p>
-                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center text-[#e08b2d] font-bold uppercase text-sm tracking-wider">
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center text-[#b5c38e] font-bold uppercase text-sm tracking-wider">
                     View Project <ArrowRight size={16} className="ml-2" />
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-          <Link to="/project-collection" className="inline-flex items-center text-[#1a1a1a] font-bold uppercase tracking-wider hover:text-[#e08b2d] transition-colors">
+          <Link to="/project-collection" className="inline-flex items-center text-[#1a1a1a] font-bold uppercase tracking-wider hover:text-[#859664] transition-colors">
             View All Projects <ArrowRight size={20} className="ml-2" />
           </Link>
         </div>

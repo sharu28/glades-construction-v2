@@ -12,7 +12,7 @@ export default function ServiceDetail() {
       <div className="min-h-screen flex items-center justify-center bg-[#f4f1ec]">
         <div className="text-center">
           <h1 className="font-display text-5xl font-bold text-[#1a1a1a] uppercase mb-4">Service Not Found</h1>
-          <Link to="/services" className="text-[#e08b2d] font-bold uppercase tracking-wider hover:underline">
+          <Link to="/services" className="text-[#859664] font-bold uppercase tracking-wider hover:underline">
             Return to Services
           </Link>
         </div>
@@ -33,11 +33,11 @@ export default function ServiceDetail() {
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/services" className="inline-flex items-center text-gray-400 font-bold uppercase text-sm tracking-wider hover:text-[#e08b2d] transition-colors mb-8">
+          <Link to="/services" className="inline-flex items-center text-gray-400 font-bold uppercase text-sm tracking-wider hover:text-[#b5c38e] transition-colors mb-8">
             <ArrowLeft size={16} className="mr-2" /> All Services
           </Link>
           <div className="flex items-start gap-6">
-            <div className="font-display text-6xl md:text-8xl font-bold text-[#e08b2d] opacity-50 leading-none mt-2 hidden md:block">
+            <div className="font-display text-6xl md:text-8xl font-bold text-[#b5c38e] opacity-70 leading-none mt-2 hidden md:block">
               {service.number}
             </div>
             <div>
@@ -78,15 +78,15 @@ export default function ServiceDetail() {
               <h3 className="font-display text-2xl font-bold text-[#1a1a1a] uppercase tracking-wider mt-12 mb-6">The Glades Standard</h3>
               <ul className="space-y-4 list-none pl-0">
                 <li className="flex items-start">
-                  <span className="text-[#e08b2d] mr-3 font-bold mt-1">///</span>
+                  <span className="text-[#859664] mr-3 font-bold mt-1">///</span>
                   <span><strong>Engineered Precision:</strong> Every detail is calculated and verified before construction begins.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#e08b2d] mr-3 font-bold mt-1">///</span>
+                  <span className="text-[#859664] mr-3 font-bold mt-1">///</span>
                   <span><strong>Full Accountability:</strong> We manage the entire process, providing a single point of contact.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#e08b2d] mr-3 font-bold mt-1">///</span>
+                  <span className="text-[#859664] mr-3 font-bold mt-1">///</span>
                   <span><strong>Lasting Quality:</strong> We use premium materials and proven techniques to ensure durability.</span>
                 </li>
               </ul>
@@ -95,11 +95,11 @@ export default function ServiceDetail() {
           
           <div className="lg:col-span-1">
             <div className="bg-[#2e3440] p-8 rounded-lg shadow-lg text-white sticky top-24">
-              <h3 className="font-display text-2xl font-bold uppercase tracking-wider mb-6 text-[#e08b2d]">Discuss Your Project</h3>
+              <h3 className="font-display text-2xl font-bold uppercase tracking-wider mb-6 text-[#b5c38e]">Discuss Your Project</h3>
               <p className="text-gray-300 mb-8">
                 Ready to leverage our 70+ years of combined engineering experience for your next project?
               </p>
-              <Link to="/contact-us" className="block w-full text-center bg-[#e08b2d] text-[#1a1a1a] px-6 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-colors">
+              <Link to="/contact-us" className="block w-full text-center bg-[#859664] text-[#1a1a1a] px-6 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-colors">
                 Get a Quote
               </Link>
               
@@ -110,7 +110,7 @@ export default function ServiceDetail() {
                     <li key={s.id}>
                       <Link to={`/services/${s.id}`} className="text-gray-300 hover:text-white transition-colors flex items-center justify-between group">
                         <span className="truncate pr-4">{s.title}</span>
-                        <ArrowRight size={14} className="text-[#e08b2d] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                        <ArrowRight size={14} className="text-[#b5c38e] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                       </Link>
                     </li>
                   ))}

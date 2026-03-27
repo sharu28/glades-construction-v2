@@ -30,7 +30,7 @@ export default function Navbar() {
                 key={link.name}
                 to={link.path}
                 className={`text-sm font-medium uppercase tracking-wider transition-colors ${
-                  location.pathname === link.path ? 'text-[#e08b2d]' : 'text-gray-300 hover:text-white'
+                  location.pathname === link.path ? 'text-[#b5c38e]' : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -38,7 +38,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact-us"
-              className="bg-[#e08b2d] text-[#1a1a1a] px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white transition-colors"
+              className="bg-[#859664] text-[#1a1a1a] px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-white transition-colors"
             >
               Get a Quote →
             </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 text-base font-medium uppercase tracking-wider ${
-                  location.pathname === link.path ? 'text-[#e08b2d]' : 'text-gray-300 hover:text-white'
+                  location.pathname === link.path ? 'text-[#b5c38e]' : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -74,7 +74,7 @@ export default function Navbar() {
             <Link
               to="/contact-us"
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 mt-4 text-center bg-[#e08b2d] text-[#1a1a1a] rounded-full text-base font-bold uppercase tracking-wider"
+              className="block px-3 py-2 mt-4 text-center bg-[#859664] text-[#1a1a1a] rounded-full text-base font-bold uppercase tracking-wider"
             >
               Get a Quote →
             </Link>

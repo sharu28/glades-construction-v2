@@ -45,13 +45,13 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#2e3440] rounded-lg p-8 shadow-lg border-l-4 border-[#e08b2d] flex flex-col h-full hover:bg-[#1a1a1a] transition-colors duration-300"
+                className="bg-[#2e3440] rounded-lg p-8 shadow-lg border-l-4 border-[#859664] flex flex-col h-full hover:bg-[#1a1a1a] transition-colors duration-300"
               >
-                <div className="font-display text-5xl font-bold text-[#e08b2d]/50 mb-6">{service.number}</div>
+                <div className="font-display text-5xl font-bold text-[#b5c38e]/60 mb-6">{service.number}</div>
                 <h3 className="font-display text-3xl font-bold text-white uppercase tracking-wider mb-4 leading-tight">{service.title}</h3>
                 <p className="text-gray-400 leading-relaxed mb-8 flex-grow">{service.description}</p>
                 
-                <Link to={`/services/${service.id}`} className="inline-flex items-center text-[#e08b2d] font-bold uppercase text-sm tracking-wider hover:text-white transition-colors mt-auto">
+                <Link to={`/services/${service.id}`} className="inline-flex items-center text-[#b5c38e] font-bold uppercase text-sm tracking-wider hover:text-white transition-colors mt-auto">
                   Explore Service <ArrowRight size={16} className="ml-2" />
                 </Link>
               </motion.div>
@@ -65,7 +65,7 @@ export default function Services() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-5xl font-bold text-white uppercase tracking-tight mb-6">Ready to start your project?</h2>
           <p className="text-xl text-gray-400 mb-10">70+ years of engineering experience behind every project we quote.</p>
-          <Link to="/contact-us" className="inline-block bg-[#e08b2d] text-[#1a1a1a] px-10 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-colors">
+          <Link to="/contact-us" className="inline-block bg-[#859664] text-[#1a1a1a] px-10 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-colors">
             Get a Quote
           </Link>
         </div>

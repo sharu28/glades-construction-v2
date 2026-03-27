@@ -51,8 +51,8 @@ export default function About() {
             { num: '02', title: 'Engineered Expertise', desc: '70+ years of structural and civil engineering knowledge, applied to every project we take on.' },
             { num: '03', title: 'Results That Stand', desc: 'We measure success in structures that perform — on time, on budget, built to last.' }
           ].map((value, i) => (
-            <div key={i} className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-[#e08b2d]">
-              <div className="font-display text-6xl font-bold text-[#e08b2d]/20 mb-4">{value.num}</div>
+            <div key={i} className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-[#859664]">
+              <div className="font-display text-6xl font-bold text-[#859664]/30 mb-4">{value.num}</div>
               <h3 className="font-display text-2xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-4">{value.title}</h3>
               <p className="text-[#6b6560] leading-relaxed">{value.desc}</p>
             </div>
@@ -72,14 +72,14 @@ export default function About() {
           
           <div className="relative border-l-2 border-white/10 pl-8 ml-4 space-y-12">
             <div className="relative">
-              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-[#e08b2d] border-4 border-[#2e3440]"></div>
-              <div className="font-display text-3xl font-bold text-[#e08b2d] mb-2">2015</div>
+              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-[#b5c38e] border-4 border-[#2e3440]"></div>
+              <div className="font-display text-3xl font-bold text-[#b5c38e] mb-2">2015</div>
               <h3 className="text-xl font-bold mb-2">Marshall Register Award</h3>
               <p className="text-gray-400">Best driveway transformation over 70m²</p>
             </div>
             <div className="relative">
-              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-[#e08b2d] border-4 border-[#2e3440]"></div>
-              <div className="font-display text-3xl font-bold text-[#e08b2d] mb-2">2014</div>
+              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-[#b5c38e] border-4 border-[#2e3440]"></div>
+              <div className="font-display text-3xl font-bold text-[#b5c38e] mb-2">2014</div>
               <h3 className="text-xl font-bold mb-2">Marshall Register Award</h3>
               <p className="text-gray-400">Best project by a new register member</p>
             </div>
@@ -110,7 +110,7 @@ export default function About() {
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Suresh De Silva</h3>
-            <div className="inline-block bg-[#1a1a1a] text-[#e08b2d] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-6 self-start">
+            <div className="inline-block bg-[#1a1a1a] text-[#b5c38e] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-6 self-start">
               Chartered Engineer · Managing Director · 40+ Yrs
             </div>
             <p className="text-[#6b6560] leading-relaxed mb-4">
@@ -131,7 +131,7 @@ export default function About() {
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Chatura Samarasinghe</h3>
-            <div className="inline-block bg-[#1a1a1a] text-[#e08b2d] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-6 self-start">
+            <div className="inline-block bg-[#1a1a1a] text-[#b5c38e] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-6 self-start">
               Civil Engineer · Commercial Director · 30+ Yrs
             </div>
             <p className="text-[#6b6560] leading-relaxed mb-4">

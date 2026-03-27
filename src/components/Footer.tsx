@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-display text-xl tracking-wider uppercase mb-4 text-[#e08b2d]">Navigation</h3>
+            <h3 className="font-display text-xl tracking-wider uppercase mb-4 text-[#b5c38e]">Navigation</h3>
             <ul className="space-y-3">
               <li><Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/project-collection" className="text-gray-400 hover:text-white transition-colors">Our Work</Link></li>
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-display text-xl tracking-wider uppercase mb-4 text-[#e08b2d]">Services</h3>
+            <h3 className="font-display text-xl tracking-wider uppercase mb-4 text-[#b5c38e]">Services</h3>
             <ul className="space-y-3">
               <li className="text-gray-400">Design & Build</li>
               <li className="text-gray-400">Extensions & Basements</li>

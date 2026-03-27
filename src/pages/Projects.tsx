@@ -52,7 +52,7 @@ export default function Projects() {
                 className={`whitespace-nowrap px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-colors ${
                   filter === cat 
                     ? 'bg-[#1a1a1a] text-white' 
-                    : 'bg-[#f4f1ec] text-[#6b6560] hover:bg-[#e08b2d] hover:text-[#1a1a1a]'
+                    : 'bg-[#f4f1ec] text-[#6b6560] hover:bg-[#859664] hover:text-[#1a1a1a]'
                 }`}
               >
                 {cat}
@@ -82,7 +82,7 @@ export default function Projects() {
                   />
                   <div className="absolute inset-0 bg-[#1a1a1a]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-6">
                     <div className="self-start">
-                      <span className="bg-[#e08b2d] text-[#1a1a1a] text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm">
+                      <span className="bg-[#859664] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm">
                         {project.type}
                       </span>
                     </div>
@@ -91,7 +91,7 @@ export default function Projects() {
                       <h3 className="font-display text-3xl font-bold text-white uppercase tracking-wider mb-2">{project.title.split('—')[0].trim()}</h3>
                       <p className="text-[#6b6560] font-medium mb-6">{project.location}</p>
                       
-                      <Link to={`/project-collection/${project.id}`} className="inline-flex items-center text-white font-bold uppercase text-sm tracking-wider hover:text-[#e08b2d] transition-colors">
+                      <Link to={`/project-collection/${project.id}`} className="inline-flex items-center text-white font-bold uppercase text-sm tracking-wider hover:text-[#b5c38e] transition-colors">
                         View Project <ArrowRight size={16} className="ml-2" />
                       </Link>
                     </div>
@@ -101,7 +101,7 @@ export default function Projects() {
                 {/* Visible info when not hovering (mobile friendly) */}
                 <div className="p-6 bg-white md:hidden">
                   <div className="mb-3">
-                    <span className="text-[#e08b2d] text-xs font-bold uppercase tracking-widest">
+                    <span className="text-[#859664] text-xs font-bold uppercase tracking-widest">
                       {project.type}
                     </span>
                   </div>
@@ -120,7 +120,7 @@ export default function Projects() {
               <p className="text-xl text-[#6b6560]">No projects found for this category.</p>
               <button 
                 onClick={() => setFilter('All')}
-                className="mt-6 text-[#e08b2d] font-bold uppercase tracking-wider hover:underline"
+                className="mt-6 text-[#859664] font-bold uppercase tracking-wider hover:underline"
               >
                 View All Projects
               </button>
