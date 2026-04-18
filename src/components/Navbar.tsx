@@ -19,8 +19,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <Link to="/" className="font-display text-2xl tracking-wider uppercase font-bold">
-              Glades Construction
+            <Link to="/" className="flex items-center gap-3">
+              <img src="/logo/mark.png" alt="" className="h-20 w-auto" />
+              <img src="/logo/text-full-size.png" alt="Glades Construction Ltd." className="h-11 w-auto invert" />
             </Link>
           </div>
           

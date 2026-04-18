@@ -6,8 +6,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="font-display text-3xl tracking-wider uppercase font-bold block mb-4">
-              Glades Construction
+            <Link to="/" className="flex items-center gap-4 mb-4">
+              <img src="/logo/mark.png" alt="" className="h-16 w-auto" />
+              <img src="/logo/text-full-size.png" alt="Glades Construction Ltd." className="h-9 w-auto invert" />
             </Link>
             <p className="text-gray-400 max-w-md mb-6">
               Full-service construction and civil engineering across the UK. From foundation to finish.
