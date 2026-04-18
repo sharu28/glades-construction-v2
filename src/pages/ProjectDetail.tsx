@@ -51,6 +51,25 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      {project.gallery && project.gallery.length > 0 && (
+        <section className="pt-24 pb-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-tight mb-10">Project Gallery</h2>
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+            {project.gallery.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`${project.title} — photo ${i + 1}`}
+                loading="lazy"
+                decoding="async"
+                className="w-full rounded-sm object-cover break-inside-avoid"
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Content Section */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
