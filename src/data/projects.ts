@@ -97,13 +97,21 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'swyncombe-avenue',
-    title: 'Swyncombe Avenue — Remodelling',
-    type: 'REMODEL',
+    id: 'rogers-ruff-landscaping',
+    title: 'Rogers Ruff — Landscaping',
+    type: 'LANDSCAPING',
     location: 'London',
-    servicesUsed: ['Complete Refurbishments'],
-    description: 'Full property transformation with contemporary finishes and structural enhancements.',
-    image: '/images/project-cards/swyncombe-avenue.jpeg'
+    servicesUsed: ['Landscaping & External Works'],
+    description: 'Comprehensive landscaping project transforming the external grounds with bespoke hardscaping and planting.',
+    image: 'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1200,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132100',
+    gallery: [
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132100',
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132354',
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132501',
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132521',
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132533',
+      'https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/rogers-ruff-landscaping/20240621_132632',
+    ]
   },
   {
     id: 'russell-road',

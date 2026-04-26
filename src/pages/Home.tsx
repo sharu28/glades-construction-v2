@@ -39,7 +39,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 font-medium"
           >
-            Full-service construction and civil engineering across the UK. Design. Build. Deliver.
+            London based construction company covering residential housing, landscaping and commercial civil engineering. Design. Build. Deliver.
           </motion.p>
           
           <motion.div 
@@ -63,11 +63,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">70+</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">35+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Years Experience</div>
             </div>
             <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">9</div>
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">150+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Projects Delivered</div>
             </div>
             <div className="px-4">

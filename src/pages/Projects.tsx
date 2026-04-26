@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 export default function Projects() {
   const [filter, setFilter] = useState('All');
   
-  const categories = ['All', 'New Build', 'Remodel', 'Commercial', 'Interior Design', 'Architecture & Design', 'Mixed'];
+  const categories = ['All', 'New Build', 'Remodel', 'Commercial', 'Interior Design', 'Architecture & Design', 'Landscaping', 'Mixed'];
   
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -36,7 +36,7 @@ export default function Projects() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-400 max-w-2xl"
           >
-            9 completed projects across residential, commercial, and civil engineering.
+            150+ completed projects across residential, commercial, and civil engineering.
           </motion.p>
         </div>
       </section>

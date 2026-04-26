@@ -26,16 +26,15 @@ export default function About() {
             transition={{ delay: 0.3 }}
             className="text-xl text-gray-300 max-w-lg"
           >
-            Two chartered engineers. 70+ years of combined expertise. One construction firm built on results.
+            Two chartered engineers. 35+ years of expertise. One construction firm built on results.
           </motion.p>
         </div>
         <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative">
           <img
             src="/images/project-cards/the-manor-house.jpg"
             alt="Construction Engineering"
-            className="absolute inset-0 w-full h-full object-cover opacity-80"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 brightness-110"
           />
-          <div className="absolute inset-0 bg-[#2e3440]/20 mix-blend-multiply"></div>
         </div>
       </section>
 
@@ -48,7 +47,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
             { num: '01', title: 'Built Around You', desc: 'Your brief is our foundation. We engineer solutions around your exact requirements and deliver on them.' },
-            { num: '02', title: 'Engineered Expertise', desc: '70+ years of structural and civil engineering knowledge, applied to every project we take on.' },
+            { num: '02', title: 'Engineered Expertise', desc: '35+ years of structural and civil engineering knowledge, applied to every project we take on.' },
             { num: '03', title: 'Results That Stand', desc: 'We measure success in structures that perform — on time, on budget, built to last.' }
           ].map((value, i) => (
             <div key={i} className="bg-white p-8 rounded-lg shadow-sm border-t-4 border-[#859664]">
