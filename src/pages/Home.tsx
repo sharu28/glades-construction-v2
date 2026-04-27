@@ -61,7 +61,7 @@ export default function Home() {
       {/* Stats Strip */}
       <section className="bg-[#1a1a1a] border-t border-white/10 py-16 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:divide-x md:divide-white/10">
             <div className="px-4">
               <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">35+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Years Experience</div>
@@ -69,14 +69,6 @@ export default function Home() {
             <div className="px-4">
               <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">150+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Projects Delivered</div>
-            </div>
-            <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">7</div>
-              <div className="text-sm uppercase tracking-widest text-white font-bold">Services Offered</div>
-            </div>
-            <div className="px-4">
-              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">40+</div>
-              <div className="text-sm uppercase tracking-widest text-white font-bold">Yrs Founder Track Record</div>
             </div>
           </div>
         </div>

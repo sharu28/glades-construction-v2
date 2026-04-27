@@ -44,7 +44,7 @@ export default function Projects() {
       {/* Filter Strip */}
       <section className="border-b border-[#6b6560]/20 bg-white sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto hide-scrollbar py-4 gap-2">
+          <div className="flex flex-wrap md:justify-start overflow-x-auto hide-scrollbar py-4 gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
