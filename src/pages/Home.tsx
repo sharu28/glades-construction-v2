@@ -13,7 +13,7 @@ export default function Home() {
       className="w-full"
     >
       {/* Hero Section */}
-      <section className="relative h-[67vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden">
+      <section className="relative min-h-[67vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/home/hero-bg.png"
@@ -22,8 +22,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-20">
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -39,7 +39,7 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 font-medium"
           >
-            London based construction company covering residential housing, landscaping and commercial civil engineering. Design. Build. Deliver.
+            London based construction company covering residential housing, landscaping and commercial civil engineering.<br />Design. Build. Deliver.
           </motion.p>
           
           <motion.div 
@@ -61,10 +61,14 @@ export default function Home() {
       {/* Stats Strip */}
       <section className="bg-[#1a1a1a] border-t border-white/10 py-16 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:divide-x md:divide-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:divide-x md:divide-white/10">
             <div className="px-4">
               <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">35+</div>
               <div className="text-sm uppercase tracking-widest text-white font-bold">Years Experience</div>
+            </div>
+            <div className="px-4">
+              <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">100%</div>
+              <div className="text-sm uppercase tracking-widest text-white font-bold">On-Time Delivery</div>
             </div>
             <div className="px-4">
               <div className="font-display text-5xl md:text-7xl font-bold text-white mb-2">150+</div>
@@ -75,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Service Categories */}
-      <section className="py-24 bg-[#f4f1ec]">
+      <section className="py-24 bg-[#faf8f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-5xl md:text-6xl font-bold text-[#1a1a1a] uppercase tracking-tight mb-4">Built Right. Every Time.</h2>
@@ -131,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Project Gallery Strip */}
-      <section className="py-24 bg-[#f4f1ec] overflow-hidden">
+      <section className="py-24 bg-[#faf8f4] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-between items-end">
           <div>
             <h2 className="font-display text-5xl font-bold text-[#1a1a1a] uppercase tracking-tight mb-2">Recent Projects</h2>

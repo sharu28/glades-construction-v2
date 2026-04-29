@@ -9,7 +9,7 @@ export default function Services() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full bg-[#f4f1ec] min-h-screen"
+      className="w-full bg-[#faf8f4] min-h-screen"
     >
       {/* Header */}
       <section className="bg-[#1a1a1a] text-white py-24 relative overflow-hidden">

@@ -7,7 +7,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full bg-[#f4f1ec]"
+      className="w-full bg-[#faf8f4]"
     >
       {/* Hero Section */}
       <section className="relative flex flex-col md:flex-row min-h-[70vh]">
@@ -103,9 +103,9 @@ export default function About() {
           <div className="flex flex-col">
             <div className="h-80 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
               <img
-                src="/images/about/hero.jpg"
+                src="/images/about/suresh.jpg"
                 alt="Suresh De Silva"
-                className="w-full h-full object-cover object-top opacity-80"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Suresh De Silva</h3>
@@ -124,9 +124,9 @@ export default function About() {
           <div className="flex flex-col">
             <div className="h-80 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
               <img
-                src="/images/about/founder-suresh.jpg"
+                src="/images/about/chatura.jpg"
                 alt="Chatura Samarasinghe"
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <h3 className="font-display text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider mb-2">Chatura Samarasinghe</h3>
@@ -140,6 +140,39 @@ export default function About() {
               Chatura utilizes advanced 3D modeling not as a design flourish, but as a precision engineering tool to eliminate on-site variables and guarantee structural accuracy before ground is even broken.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* The Team */}
+      <section className="pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="font-display text-5xl font-bold text-[#1a1a1a] uppercase tracking-tight mb-4">The Glades Team</h2>
+          <p className="text-lg text-[#6b6560] max-w-2xl mx-auto">
+            The skilled hands and sharp minds behind every project we deliver.
+          </p>
+        </div>
+
+        <div className="relative h-[60vh] min-h-[400px] rounded-lg overflow-hidden mb-8">
+          <img
+            src="/images/about/team.jpg"
+            alt="The Glades Construction Team"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="mb-8 text-center">
+          <div className="inline-block bg-[#859664] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-3">
+            Our People
+          </div>
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-[#1a1a1a] uppercase tracking-wider">
+            One Team. One Standard.
+          </h3>
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[#6b6560] leading-relaxed">
+            Behind every Glades project is a team that shares one philosophy: do it once, do it right.
+          </p>
         </div>
       </section>
     </motion.div>

@@ -9,7 +9,7 @@ export default function ServiceDetail() {
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#f4f1ec]">
+      <div className="min-h-screen flex items-center justify-center bg-[#faf8f4]">
         <div className="text-center">
           <h1 className="font-display text-5xl font-bold text-[#1a1a1a] uppercase mb-4">Service Not Found</h1>
           <Link to="/services" className="text-[#859664] font-bold uppercase tracking-wider hover:underline">
@@ -25,7 +25,7 @@ export default function ServiceDetail() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full bg-[#f4f1ec] min-h-screen"
+      className="w-full bg-[#faf8f4] min-h-screen"
     >
       {/* Header */}
       <section className="bg-[#1a1a1a] text-white py-24 relative overflow-hidden">

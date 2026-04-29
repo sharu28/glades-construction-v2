@@ -50,11 +50,11 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full bg-[#f4f1ec] min-h-screen"
+      className="w-full bg-[#faf8f4] min-h-screen"
     >
       <div className="flex flex-col lg:flex-row min-h-[calc(100vh-80px)]">
         {/* Left Panel - Form */}
-        <div className="w-full lg:w-3/5 p-8 md:p-16 lg:p-24 bg-[#f4f1ec]">
+        <div className="w-full lg:w-3/5 p-8 md:p-16 lg:p-24 bg-[#faf8f4]">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

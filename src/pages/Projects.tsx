@@ -18,7 +18,7 @@ export default function Projects() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="w-full bg-[#f4f1ec] min-h-screen"
+      className="w-full bg-[#faf8f4] min-h-screen"
     >
       {/* Header */}
       <section className="bg-[#1a1a1a] text-white py-24">
@@ -52,7 +52,7 @@ export default function Projects() {
                 className={`whitespace-nowrap px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-colors ${
                   filter === cat 
                     ? 'bg-[#1a1a1a] text-white' 
-                    : 'bg-[#f4f1ec] text-[#6b6560] hover:bg-[#859664] hover:text-[#1a1a1a]'
+                    : 'bg-[#faf8f4] text-[#6b6560] hover:bg-[#859664] hover:text-[#1a1a1a]'
                 }`}
               >
                 {cat}
