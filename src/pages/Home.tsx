@@ -16,7 +16,7 @@ export default function Home() {
       <section className="relative min-h-[67vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/home/hero-bg.png"
+            src="https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/114-copsewood-way/Screenshot_20240222_105428_Gallery"
             alt="Construction Site"
             className="w-full h-full object-cover opacity-40"
           />
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -32,8 +32,8 @@ export default function Home() {
           >
             We Build Structures<br />That Last Generations.
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -41,8 +41,8 @@ export default function Home() {
           >
             London based construction company covering residential housing, landscaping and commercial civil engineering.<br />Design. Build. Deliver.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
