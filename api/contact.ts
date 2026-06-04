@@ -1,10 +1,33 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
-import { validateContactForm } from './lib/validate-contact';
 
 const NOTIFY_TO = 'Info@gladesconstructionltd.com';
 const NOTIFY_BCC = ['sharukesh.seker@gmail.com', 'ravinduabeysinghe@gmail.com'];
 const FROM = 'Glades Construction <noreply@gladesconstructionltd.com>';
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateContactForm(data: unknown) {
+  if (!data || typeof data !== 'object') {
+    return { valid: false, error: 'Invalid request body' };
+  }
+
+  const { firstName, lastName, email, message } = data as Record<string, unknown>;
+
+  if (!firstName || typeof firstName !== 'string' || firstName.trim() === '') {
+    return { valid: false, error: 'First name is required' };
+  }
+  if (!lastName || typeof lastName !== 'string' || lastName.trim() === '') {
+    return { valid: false, error: 'Last name is required' };
+  }
+  if (!email || typeof email !== 'string' || !EMAIL_RE.test(email)) {
+    return { valid: false, error: 'A valid email address is required' };
+  }
+  if (!message || typeof message !== 'string' || message.trim() === '') {
+    return { valid: false, error: 'Message is required' };
+  }
+
+  return { valid: true };
+}
 
 function escapeHtml(value: string) {
   return value
