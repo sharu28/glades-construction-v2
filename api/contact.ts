@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 
 const NOTIFY_TO = 'Info@gladesconstructionltd.com';
 const NOTIFY_BCC = ['sharukesh.seker@gmail.com', 'ravinduabeysinghe@gmail.com'];
-const FROM = 'Glades Construction <noreply@gladesconstructionltd.com>';
+const FROM = 'Glades Construction <sharu@etherlabs.lk>';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validateContactForm(data: unknown) {
