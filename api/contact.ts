@@ -71,7 +71,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const safeMessage = escapeHtml(message.trim());
 
   try {
-    await Promise.all([
+    const [notificationResult, autoReplyResult] = await Promise.all([
       resend.emails.send({
         from: FROM,
         to: [NOTIFY_TO],
@@ -122,6 +122,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         `,
       }),
     ]);
+
+    const resendErrors = [notificationResult.error, autoReplyResult.error].filter(Boolean);
+    if (resendErrors.length > 0) {
+      console.error('Resend error:', resendErrors);
+      return res.status(500).json({ error: 'Failed to send message. Please try again.' });
+    }
+
+    console.info('Resend email IDs:', {
+      notification: notificationResult.data?.id,
+      autoReply: autoReplyResult.data?.id,
+    });
 
     return res.status(200).json({ success: true });
   } catch (err) {
