@@ -1,10 +1,5 @@
 import { motion } from 'motion/react';
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -17,27 +12,24 @@ export default function Contact() {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus('sending');
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: `${form.firstName} ${form.lastName}`,
-          from_email: form.email,
-          phone: form.phone,
-          project_type: form.projectType,
-          message: form.message,
-          to_email: 'info@gladesconstructionltd.com',
-        },
-        EMAILJS_PUBLIC_KEY
-      );
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Contact form submission failed');
+      }
+
       setStatus('sent');
       setForm({ firstName: '', lastName: '', email: '', phone: '', projectType: '', message: '' });
     } catch {
