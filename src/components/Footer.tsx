@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { services } from '../data/services';
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
               <img src="/logo/text-full-size.png" alt="Glades Construction Ltd." className="h-9 w-auto invert" />
             </Link>
             <p className="text-gray-400 max-w-md mb-6">
-              Full-service construction and civil engineering across the UK. From foundation to finish.
+              Complete construction processes in domestic and commercial and civil engineering projects in London and suburbs.
             </p>
             <div className="space-y-2 text-gray-400">
               <p>38 Cedar Drive, Pinner, HA5 4DE</p>
@@ -34,10 +35,13 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-xl tracking-wider uppercase mb-4 text-[#b5c38e]">Services</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">Design & Build</li>
-              <li className="text-gray-400">Extensions & Basements</li>
-              <li className="text-gray-400">Complete Refurbishments</li>
-              <li className="text-gray-400">Commercial Civil Engineering</li>
+              {services.map((service) => (
+                <li key={service.id}>
+                  <Link to={`/services/${service.id}`} className="text-gray-400 hover:text-white transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -26,12 +26,12 @@ export default function About() {
             transition={{ delay: 0.3 }}
             className="text-xl text-gray-300 max-w-lg"
           >
-            Two chartered engineers. 35+ years of expertise. One construction firm built on results.
+            2 senior engineers with combined 70+ years of experience. A construction firm built on results.
           </motion.p>
         </div>
         <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative">
           <img
-            src="/images/project-cards/the-manor-house.jpg"
+            src="https://lh3.googleusercontent.com/d/16e8d0Bq25A2ocQgPI2Zqv8qMpGzCQXJs=w1600"
             alt="Construction Engineering"
             className="absolute inset-0 w-full h-full object-cover opacity-100 brightness-110"
           />

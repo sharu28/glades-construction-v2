@@ -1,17 +1,28 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
 import { ArrowRight } from 'lucide-react';
+import {
+  architectureStructuralDesignProjects,
+  commercialCivilEngineeringProjects,
+  interiorDesignProjects,
+  landscapingProjects,
+  newBuildProjects,
+  remodelProjects,
+} from '../data/projectCategories';
+
+const projectTabs = [
+  { label: 'New Build', projects: newBuildProjects },
+  { label: 'Remodel', projects: remodelProjects },
+  { label: 'Landscaping', projects: landscapingProjects },
+  { label: 'Interior Design', projects: interiorDesignProjects },
+  { label: 'Architecture & Structural Design', projects: architectureStructuralDesignProjects },
+  { label: 'Commercial', projects: commercialCivilEngineeringProjects },
+];
 
 export default function Projects() {
-  const [filter, setFilter] = useState('All');
-  
-  const categories = ['All', 'New Build', 'Remodel', 'Commercial', 'Interior Design', 'Architecture & Design', 'Landscaping', 'Mixed'];
-  
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.type.toLowerCase() === filter.toLowerCase());
+  const [activeTab, setActiveTab] = useState(projectTabs[0].label);
+  const activeProjects = projectTabs.find((tab) => tab.label === activeTab)?.projects ?? [];
 
   return (
     <motion.div 
@@ -45,17 +56,17 @@ export default function Projects() {
       <section className="border-b border-[#6b6560]/20 bg-white sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap md:justify-start overflow-x-auto hide-scrollbar py-4 gap-2">
-            {categories.map((cat) => (
+            {projectTabs.map((tab) => (
               <button
-                key={cat}
-                onClick={() => setFilter(cat)}
+                key={tab.label}
+                onClick={() => setActiveTab(tab.label)}
                 className={`whitespace-nowrap px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-colors ${
-                  filter === cat 
+                  activeTab === tab.label
                     ? 'bg-[#1a1a1a] text-white' 
                     : 'bg-[#faf8f4] text-[#6b6560] hover:bg-[#859664] hover:text-[#1a1a1a]'
                 }`}
               >
-                {cat}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -66,7 +77,7 @@ export default function Projects() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, i) => (
+            {activeProjects.map((project, i) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -115,14 +126,14 @@ export default function Projects() {
             ))}
           </div>
           
-          {filteredProjects.length === 0 && (
+          {activeProjects.length === 0 && (
             <div className="text-center py-24">
               <p className="text-xl text-[#6b6560]">No projects found for this category.</p>
               <button 
-                onClick={() => setFilter('All')}
+                onClick={() => setActiveTab(projectTabs[0].label)}
                 className="mt-6 text-[#859664] font-bold uppercase tracking-wider hover:underline"
               >
-                View All Projects
+                View New Build Projects
               </button>
             </div>
           )}

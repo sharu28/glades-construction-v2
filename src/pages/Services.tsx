@@ -30,7 +30,7 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-400 max-w-2xl"
           >
-            Full-service construction and civil engineering — from first drawing to final handover.
+            Detailed and precise construction from start to finish.
           </motion.p>
         </div>
       </section>
@@ -45,15 +45,28 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#2e3440] rounded-lg p-8 shadow-lg border-l-4 border-[#859664] flex flex-col h-full hover:bg-[#1a1a1a] transition-colors duration-300"
+                whileHover={{ y: -12, scale: 1.03 }}
+                className="group bg-[#2e3440] rounded-lg overflow-hidden shadow-lg border-l-4 border-[#859664] flex flex-col h-full hover:bg-[#1a1a1a] hover:border-[#b5c38e] hover:shadow-2xl hover:shadow-[#1a1a1a]/30 transition-colors duration-300"
               >
-                <div className="font-display text-5xl font-bold text-[#b5c38e]/60 mb-6">{service.number}</div>
-                <h3 className="font-display text-3xl font-bold text-white uppercase tracking-wider mb-4 leading-tight">{service.title}</h3>
-                <p className="text-gray-400 leading-relaxed mb-8 flex-grow">{service.description}</p>
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#1a1a1a]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.15]"
+                  />
+                  <div className="absolute inset-0 bg-[#1a1a1a]/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </div>
+
+                <div className="flex flex-col flex-grow p-8">
+                  <h3 className="font-display text-2xl font-bold text-white uppercase tracking-wider mb-4 leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed mb-8 flex-grow">{service.description}</p>
                 
-                <Link to={`/services/${service.id}`} className="inline-flex items-center text-[#b5c38e] font-bold uppercase text-sm tracking-wider hover:text-white transition-colors mt-auto">
-                  Explore Service <ArrowRight size={16} className="ml-2" />
-                </Link>
+                  <Link to={`/services/${service.id}`} className="inline-flex items-center text-[#b5c38e] font-bold uppercase text-sm tracking-wider hover:text-white transition-colors mt-auto">
+                    Explore Service <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>

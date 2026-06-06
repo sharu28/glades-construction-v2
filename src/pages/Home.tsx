@@ -88,11 +88,11 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Residential Housing', img: '/images/home/service-card-landscaping.jpg' },
-              { title: 'Landscaping', img: '/images/home/service-card-commercial.jpg' },
-              { title: 'Commercial Civil Engineering', img: '/images/home/service-card-residential.jpg' }
+              { title: 'Residential Housing', img: '/images/home/residential-housing-card.jpg', href: '/project-collection/category/residential-housing' },
+              { title: 'Landscaping', img: '/images/home/service-card-commercial.jpg', href: '/project-collection/category/landscaping' },
+              { title: 'Commercial Civil Engineering', img: '/images/home/service-card-residential.jpg', href: '/project-collection/category/commercial-civil-engineering' }
             ].map((cat, i) => (
-              <Link to="/services" key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#859664] transition-all duration-300">
+              <Link to={cat.href} key={i} className="group block relative overflow-hidden bg-[#2e3440] rounded-lg shadow-lg border-t-4 border-transparent hover:border-[#859664] transition-all duration-300">
                 <div className="h-64 overflow-hidden">
                   <img src={cat.img} alt={cat.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" />
                 </div>

@@ -11,6 +11,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import ProjectCategory from './pages/ProjectCategory';
 import ProjectDetail from './pages/ProjectDetail';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
@@ -36,6 +37,7 @@ function AnimatedRoutes() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="project-collection" element={<Projects />} />
+          <Route path="project-collection/category/:category" element={<ProjectCategory />} />
           <Route path="project-collection/:id" element={<ProjectDetail />} />
           <Route path="services" element={<Services />} />
           <Route path="services/:id" element={<ServiceDetail />} />

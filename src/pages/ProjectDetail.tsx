@@ -1,11 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { projects } from '../data/projects';
+import { allProjects } from '../data/projectCategories';
 import { ArrowLeft } from 'lucide-react';
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
-  const project = projects.find(p => p.id === id);
+  const project = allProjects.find(p => p.id === id);
 
   if (!project) {
     return (
