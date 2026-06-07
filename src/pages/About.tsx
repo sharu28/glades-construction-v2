@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
+import { driveImagePaths } from '../data/driveImageManifest';
 
 export default function About() {
   return (
@@ -31,7 +32,7 @@ export default function About() {
         </div>
         <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative">
           <img
-            src="https://lh3.googleusercontent.com/d/16e8d0Bq25A2ocQgPI2Zqv8qMpGzCQXJs=w1600"
+            src={driveImagePaths['16e8d0Bq25A2ocQgPI2Zqv8qMpGzCQXJs']}
             alt="Construction Engineering"
             className="absolute inset-0 w-full h-full object-cover opacity-100 brightness-110"
           />

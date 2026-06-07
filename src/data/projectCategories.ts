@@ -1,6 +1,7 @@
 import { projects, type Project } from './projects';
+import { driveImagePaths } from './driveImageManifest';
 
-const driveImage = (id: string, width = 1600) => `https://lh3.googleusercontent.com/d/${id}=w${width}`;
+const driveImage = (id: string, _width = 1600) => driveImagePaths[id];
 const gallery = (ids: string[]) => ids.map((id) => driveImage(id, 1920));
 
 type DriveProjectInput = {
