@@ -1,10 +1,36 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { projects } from '../data/projects';
 import { services } from '../data/services';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
+const heroSlides = [
+  {
+    src: '/images/drive-cache/1W6p745nhU93hQsAyOxAe-bOGY52m24FV.jpg',
+    alt: 'Completed Glades residential brick home'
+  },
+  {
+    src: '/images/drive-cache/1tEtIEUKGeHUAIDlJNcgRIYAsPBEZmw85.jpg',
+    alt: 'Residential roof construction by Glades'
+  },
+  {
+    src: '/images/drive-cache/147J1tB12QTdwhgHpRo2PSWIGGRfxWTkR.jpg',
+    alt: 'Finished residential driveway and home exterior'
+  }
+];
+
 export default function Home() {
+  const [activeHeroSlide, setActiveHeroSlide] = useState(0);
+
+  useEffect(() => {
+    const slideTimer = window.setInterval(() => {
+      setActiveHeroSlide((currentSlide) => (currentSlide + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => window.clearInterval(slideTimer);
+  }, []);
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -15,11 +41,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[67vh] flex items-center justify-center bg-[#1a1a1a] overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://res.cloudinary.com/ds4xc6fcf/image/upload/f_auto,q_auto,w_1920,c_limit/glades/project-galleries/114-copsewood-way/Screenshot_20240222_105428_Gallery"
-            alt="Construction Site"
-            className="w-full h-full object-cover opacity-40"
-          />
+          {heroSlides.map((slide, index) => (
+            <img
+              key={slide.src}
+              src={slide.src}
+              alt={slide.alt}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                index === activeHeroSlide ? 'opacity-45' : 'opacity-0'
+              }`}
+            />
+          ))}
           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
         </div>
 
@@ -54,6 +85,27 @@ export default function Home() {
             <Link to="/services" className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a] px-8 py-4 rounded-full font-bold uppercase tracking-wider transition-colors text-center">
               Our Services
             </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+            className="mt-10 flex items-center justify-center gap-3"
+            aria-label="Hero image carousel"
+          >
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.src}
+                type="button"
+                onClick={() => setActiveHeroSlide(index)}
+                aria-label={`Show ${slide.alt}`}
+                aria-current={index === activeHeroSlide}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  index === activeHeroSlide ? 'w-10 bg-[#859664]' : 'w-2.5 bg-white/50 hover:bg-white/80'
+                }`}
+              />
+            ))}
           </motion.div>
         </div>
       </section>
